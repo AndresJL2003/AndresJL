@@ -1,0 +1,74 @@
+# ============================================
+# Archivos de Configuración con Datos Sensibles
+# ============================================
+config/config.php
+config/config-production.php
+config/config-infinityfree.php
+
+# ============================================
+# Dependencias
+# ============================================
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+# ============================================
+# Archivos de Base de Datos
+# ============================================
+*.sql
+*.sqlite
+*.db
+
+# ============================================
+# Archivos Temporales y Logs
+# ============================================
+*.log
+*.tmp
+*.temp
+logs/
+temp/
+tmp/
+
+# ============================================
+# Archivos de Sistema
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# ============================================
+# IDEs y Editores
+# ============================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# Archivos de Entorno
+# ============================================
+.env
+.env.local
+.env.production
+
+# ============================================
+# Archivos de Caché
+# ============================================
+cache/
+*.cache
+
+# ============================================
+# Archivos de Subida de Usuarios
+# ============================================
+uploads/
+images/uploads/
+
+# ============================================
+# Archivos de Testing
+# ============================================
+phpunit.xml
+.phpunit.result.cache
