@@ -44,7 +44,7 @@ if (isset($_SESSION['mensaje_exito'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - Plataforma Educativa</title>
+    <title>Iniciar Sesión - Plataforma Educativa V2 </title>
 
     <!-- Preconnect para mejorar velocidad -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
@@ -62,7 +62,7 @@ if (isset($_SESSION['mensaje_exito'])) {
             <div class="hidden md:block">
                 <div class="text-center mb-8">
                     <h1 class="text-5xl font-bold text-white mb-4">
-                        <i class="fas fa-graduation-cap"></i> Plataforma Educativa
+                        <i class="fas fa-graduation-cap"></i> Plataforma Educativa v 2
                     </h1>
                     <p class="text-white/90 text-xl">Aprende, crece y alcanza tus metas</p>
                 </div>
@@ -76,7 +76,7 @@ if (isset($_SESSION['mensaje_exito'])) {
                 <!-- Logo móvil -->
                 <div class="text-center mb-8 md:hidden">
                     <h1 class="text-4xl font-bold text-white mb-2">
-                        <i class="fas fa-graduation-cap"></i> Plataforma Educativa
+                        <i class="fas fa-graduation-cap"></i> Plataforma Educativa v2
                     </h1>
                     <p class="text-white/80">Inicia sesión para continuar aprendiendo</p>
                 </div>
@@ -181,7 +181,7 @@ if (isset($_SESSION['mensaje_exito'])) {
 
         <!-- Footer -->
         <div class="text-center mt-6 text-white/80 text-sm">
-            <p>&copy; <?= date('Y') ?> Plataforma Educativa. Todos los derechos reservados.</p>
+            <p>&copy; <?= date('Y') ?> Plataforma Educativa v2. Todos los derechos reservados.</p>
         </div>
     </div>
 
