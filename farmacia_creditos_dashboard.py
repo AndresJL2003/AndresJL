@@ -359,7 +359,7 @@ with col1:
     st.markdown(f"""
         <div class="powerbi-card card-creditos">
             <h3>Créditos Otorgados</h3>
-            <h2>${total_creditos:,.2f}</h2>
+            <h2>Bs {total_creditos:,.2f}</h2>
         </div>
     """, unsafe_allow_html=True)
 
@@ -367,7 +367,7 @@ with col2:
     st.markdown(f"""
         <div class="powerbi-card card-impaga">
             <h3>Deuda Impaga</h3>
-            <h2>${deuda_impaga:,.2f}</h2>
+            <h2>Bs {deuda_impaga:,.2f}</h2>
         </div>
     """, unsafe_allow_html=True)
 
@@ -383,7 +383,7 @@ with col4:
     st.markdown(f"""
         <div class="powerbi-card card-cobrar">
             <h3>Por Cobrar</h3>
-            <h2>${por_cobrar:,.2f}</h2>
+            <h2>Bs {por_cobrar:,.2f}</h2>
         </div>
     """, unsafe_allow_html=True)
 
@@ -474,14 +474,14 @@ with tab1:
         )
 
         fig.update_traces(
-            texttemplate='$%{text:,.0f}',
+            texttemplate='Bs %{text:,.0f}',
             textposition='inside',
             textfont=dict(size=12, color='white')
         )
         fig.update_layout(
             height=350,
             xaxis=dict(title="Tipo de Cliente", showgrid=False),
-            yaxis=dict(title="Monto Total ($)", showgrid=True, gridcolor='#f0f0f0'),
+            yaxis=dict(title="Monto Total (Bs)", showgrid=True, gridcolor='#f0f0f0'),
             showlegend=False,
             plot_bgcolor='white',
             paper_bgcolor='white',
@@ -514,7 +514,7 @@ with tab1:
     fig.update_layout(
         height=350,
         xaxis=dict(title='Mes', showgrid=False),
-        yaxis=dict(title='Monto ($)', showgrid=True, gridcolor='#f0f0f0'),
+        yaxis=dict(title='Monto (Bs)', showgrid=True, gridcolor='#f0f0f0'),
         hovermode='x unified',
         plot_bgcolor='white',
         paper_bgcolor='white',
@@ -550,13 +550,13 @@ with tab2:
         )
 
         fig.update_traces(
-            texttemplate='$%{text:,.0f}',
+            texttemplate='Bs %{text:,.0f}',
             textposition='inside',
             textfont=dict(size=10, color='white')
         )
         fig.update_layout(
             height=400,
-            xaxis=dict(title="Deuda ($)", showgrid=True, gridcolor='#f0f0f0'),
+            xaxis=dict(title="Deuda (Bs)", showgrid=True, gridcolor='#f0f0f0'),
             yaxis=dict(title=""),
             plot_bgcolor='white',
             paper_bgcolor='white',
@@ -591,13 +591,13 @@ with tab2:
             )
 
             fig.update_traces(
-                texttemplate='$%{text:,.0f}',
+                texttemplate='Bs %{text:,.0f}',
                 textposition='outside'
             )
             fig.update_layout(
                 height=400,
                 xaxis=dict(title="Días de Mora", showgrid=False),
-                yaxis=dict(title="Monto ($)", showgrid=True, gridcolor='#f0f0f0'),
+                yaxis=dict(title="Monto (Bs)", showgrid=True, gridcolor='#f0f0f0'),
                 showlegend=False,
                 coloraxis_showscale=False,
                 plot_bgcolor='white',
@@ -638,7 +638,7 @@ with tab2:
         fig.update_layout(
             height=300,
             xaxis=dict(title='Semana', showgrid=False),
-            yaxis=dict(title='Monto ($)', showgrid=True, gridcolor='#f0f0f0'),
+            yaxis=dict(title='Monto (Bs)', showgrid=True, gridcolor='#f0f0f0'),
             plot_bgcolor='white',
             paper_bgcolor='white',
             font=dict(family='Segoe UI', size=11, color='#252423')
@@ -669,7 +669,7 @@ with tab3:
         clientes_activos.columns = ['Cliente', 'Créditos', 'Monto Total']
 
         clientes_activos['Créditos'] = clientes_activos['Créditos'].astype(int)
-        clientes_activos['Monto Total'] = clientes_activos['Monto Total'].apply(lambda x: f"${x:,.2f}")
+        clientes_activos['Monto Total'] = clientes_activos['Monto Total'].apply(lambda x: f"Bs {x:,.2f}")
 
         st.dataframe(clientes_activos, use_container_width=True, height=350)
 
@@ -720,7 +720,7 @@ with tab4:
     cuotas_vencidas_detalle = cuotas_vencidas_detalle.sort_values('dias_mora', ascending=False)
 
     # Formatear
-    cuotas_vencidas_detalle['monto_total'] = cuotas_vencidas_detalle['monto_total'].apply(lambda x: f"${x:,.2f}")
+    cuotas_vencidas_detalle['monto_total'] = cuotas_vencidas_detalle['monto_total'].apply(lambda x: f"Bs {x:,.2f}")
     cuotas_vencidas_detalle['fecha_programada'] = cuotas_vencidas_detalle['fecha_programada'].dt.strftime('%Y-%m-%d')
 
     cuotas_vencidas_detalle.columns = ['Cliente', 'Tipo', 'Cuota #', 'Monto', 'Fecha Vencimiento', 'Días Mora']
