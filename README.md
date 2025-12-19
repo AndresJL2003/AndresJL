@@ -20,7 +20,3 @@ Dashboard interactivo estilo Power BI para gestión de créditos y cobranzas de 
 
 ### Detalle de Cuotas
 ![Detalle de Cuotas](screenshots/05_detalle_cuotas.png)
-
----
-
-Dashboard creado con Claude Code | 2025
