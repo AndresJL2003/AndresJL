@@ -754,6 +754,6 @@ with tab4:
 st.markdown("---")
 st.markdown("""
     <div style='text-align: center; color: gray;'>
-        <p>💊 Farmacia - Sistema de Gestión de Créditos | Powered by Python + Streamlit | © 2025</p>
+        <p>💊 Farmacia - Sistema de Gestión de Créditos</p>
     </div>
 """, unsafe_allow_html=True)
