@@ -44,23 +44,8 @@ Tabla completa con métricas detalladas por restaurante.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
 
-- **Python** - Lenguaje de programación
-- **Streamlit** - Framework para dashboards interactivos
-- **Plotly** - Librería de visualización de datos
-- **Pandas** - Procesamiento de datos
-- **NumPy** - Cálculos numéricos
 
-## 🚀 Características
-
-- ✅ Interfaz estilo Power BI
-- ✅ Filtros interactivos (fechas, países, regiones, categorías)
-- ✅ Visualizaciones dinámicas
-- ✅ Análisis multidimensional
-- ✅ Datos de muestra de 5 países
-- ✅ Sistema de pestañas organizado
-- ✅ Responsive design
 
 ## 📈 Datos Simulados
 
@@ -70,6 +55,4 @@ El dashboard incluye datos de ejemplo de:
 - 🍔 5 categorías de productos
 - 📅 2 años de datos históricos (2023-2024)
 
----
 
-Desarrollado con Python + Streamlit | © 2025
